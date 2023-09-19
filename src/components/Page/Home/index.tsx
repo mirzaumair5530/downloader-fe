@@ -1,7 +1,9 @@
 import { FC, PropsWithChildren } from "react";
-import { UrlSearch } from "@/components/sub-components";
+import { UrlSearch, Feature } from "@/components/sub-components";
 import { SearchContainer } from "./sub-components";
-import { Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
+
+import { Features } from "@/components/Page/Home/Constants";
 
 const HomeComponent: FC<PropsWithChildren> = () => {
 	return (
@@ -11,6 +13,15 @@ const HomeComponent: FC<PropsWithChildren> = () => {
 			</Typography>
 			<Typography>Free, Fast and Easy video Downloader - Download Your Favorite Video Now!</Typography>
 			<UrlSearch />
+			<Grid container gap={8} justifyContent={"space-between"} paddingY={5}>
+				{Features.map((feature, index) => {
+					return (
+						<Grid item key={index}>
+							<Feature icon={feature.icon} text={feature.text} />
+						</Grid>
+					);
+				})}
+			</Grid>
 		</SearchContainer>
 	);
 };

@@ -20,6 +20,7 @@ const StyledSearch = styled(Box)(() => {
 		display: "flex",
 		flexWrap: "nowrap",
 		minHeight: "58px",
+		marginBlockEnd: "5rem",
 		[`& .${inputBaseClasses.root}`]: {
 			flexGrow: 1,
 			border: "2px solid white",
