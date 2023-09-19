@@ -15,7 +15,7 @@ const UrlSearch: FC<UrlSearchInterface> = ({}) => {
 	);
 };
 
-const StyledSearch = styled(Box)(({ theme }) => {
+const StyledSearch = styled(Box)(() => {
 	return {
 		display: "flex",
 		flexWrap: "nowrap",
