@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { styled } from "@mui/material/styles";
 import { Box, Typography } from "@mui/material";
 
-import type { FeatureInterface } from "@/interfaces/index.js";
+import type { FeatureInterface } from "@/interfaces";
 
 const Feature: FC<FeatureInterface> = ({ text, icon }) => {
 	return (

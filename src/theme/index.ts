@@ -1,4 +1,10 @@
 "use client";
-import { createTheme } from "@mui/material/styles";
+import { createTheme, ThemeOptions } from "@mui/material/styles";
 
-export default createTheme({});
+export default createTheme({
+	palette: {
+		primary: {
+			main: "#6171FF",
+		},
+	},
+});

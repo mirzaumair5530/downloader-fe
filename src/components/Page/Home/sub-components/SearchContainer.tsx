@@ -1,12 +1,14 @@
 import { FC, PropsWithChildren } from "react";
 import { styled } from "@mui/material/styles";
 import { Box } from "@mui/material";
+import { containerClasses } from "@mui/material/Container";
 import { typographyClasses } from "@mui/material/Typography";
+import { MainContainer } from "@/components/sub-components";
 
 const SearchContainer: FC<PropsWithChildren> = ({ children }) => {
 	return (
 		<SearchContainerComponent>
-			<Box className={"items__container"}>{children}</Box>
+			<MainContainer>{children}</MainContainer>
 		</SearchContainerComponent>
 	);
 };
@@ -16,15 +18,16 @@ const SearchContainerComponent = styled(Box)(() => {
 		minHeight: "909px",
 		backgroundColor: "gray",
 		backgroundImage: "url(/assets/home/search-background.png)",
-		backgroundImageRepeat: "no-repeat",
-		backgroundImagePosition: "center center",
+		backgroundRepeat: "no-repeat",
+		backgroundPosition: "center",
+		backgroundSize: "cover",
 		position: "relative",
-		"& .items__container": {
-			width: "50%",
+
+		[`& .${containerClasses.root}`]: {
+			transform: "translate(-50%, -50%)",
 			position: "absolute",
 			top: "50%",
 			left: "50%",
-			transform: "translate(-50%, -50%)",
 		},
 
 		[`& .${typographyClasses.root}`]: {

@@ -6,7 +6,7 @@ import { styled } from "@mui/material/styles";
 
 import { UrlSearchInterface } from "@/interfaces/sub-components/urlSearch.interface";
 
-const UrlSearch: FC<UrlSearchInterface> = ({}) => {
+const UrlSearch: FC<UrlSearchInterface> = () => {
 	return (
 		<StyledSearch>
 			<InputBase type={"url"} placeholder={"Paste Video URL"} size={"medium"} />
