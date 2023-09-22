@@ -1,5 +1,5 @@
 import { FC, PropsWithChildren } from "react";
-import { UrlSearch, Feature, DetailsSectionOne } from "@/components/sub-components";
+import { UrlSearch, Feature, DetailsSectionOne, DetailsSectionTwo } from "@/components/sub-components";
 import { SearchContainer } from "./sub-components";
 import { Box, Grid, Typography } from "@mui/material";
 
@@ -29,6 +29,9 @@ const HomeComponent: FC<PropsWithChildren> = () => {
 
 			{/* details section 1*/}
 			<DetailsSectionOne />
+
+			{/*	details section 2*/}
+			<DetailsSectionTwo />
 		</Box>
 	);
 };
