@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { styled } from "@mui/material/styles";
-import { Container, Theme } from "@mui/material";
+import { Container } from "@mui/material";
 import type { MainContainerType } from "@/interfaces";
 
 const MainContainer: FC<MainContainerType> = ({ children, sx }) => {
@@ -16,7 +16,7 @@ const StyledContainer = styled(Container, {
 })(({ theme }) => {
 	return {
 		paddingInline: 0,
-		width: "50%",
+		width: "60%",
 		[theme.breakpoints.down("lg")]: {
 			width: "70%",
 			paddingInline: theme.spacing(3),
