@@ -9,14 +9,14 @@ const DetailsSectionThree: FC = () => {
 	return (
 		<StyledContainer>
 			<MainContainer>
-				<Grid container paddingY={20} justifyContent={"space-between"}>
-					<Grid gap={5} item xs={12} md={4}>
+				<Grid container gap={5} paddingY={20} justifyContent={"space-between"}>
+					<Grid item xs={12} md={4}>
 						<Restriction />
 					</Grid>
 					<Grid
 						item
 						xs={12}
-						md={8}
+						md={7}
 						container
 						alignItems={"center"}
 						flexDirection={"column"}
