@@ -13,7 +13,15 @@ const DetailsSectionThree: FC = () => {
 					<Grid gap={5} item xs={12} md={4}>
 						<Restriction />
 					</Grid>
-					<Grid item xs={12} md={8} container alignItems={"center"} flexDirection={"column"} justifyContent={'space-around'}>
+					<Grid
+						item
+						xs={12}
+						md={8}
+						container
+						alignItems={"center"}
+						flexDirection={"column"}
+						justifyContent={"space-around"}
+					>
 						<Typography
 							color={"primary.main"}
 							variant={"h1"}
@@ -25,9 +33,9 @@ const DetailsSectionThree: FC = () => {
 						</Typography>
 						<Typography color={"primary.main"} textAlign={"center"} maxWidth={"55ch"}>
 							Say goodbye to the hassle of registering for an account just to download images. Our website
-							is designed to provide an effortless and convenient experience to our users. With our 'No
-							Registration Required' feature, you can directly download images without any added steps.
-							Simply search, preview and download - it's that easy!
+							is designed to provide an effortless and convenient experience to our users. With our
+							&#39;No Registration Required&#39; feature, you can directly download images without any
+							added steps. Simply search, preview and download - it's that easy!
 						</Typography>
 					</Grid>
 				</Grid>

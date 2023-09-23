@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { styled } from "@mui/material/styles";
-import { Container, Theme } from "@mui/material";
+import { Container } from "@mui/material";
 import type { MainContainerType } from "@/interfaces";
 
 const MainContainer: FC<MainContainerType> = ({ children, sx }) => {

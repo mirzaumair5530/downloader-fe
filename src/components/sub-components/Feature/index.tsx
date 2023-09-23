@@ -2,13 +2,13 @@ import React, { FC } from "react";
 import { styled } from "@mui/material/styles";
 import { Box, Typography } from "@mui/material";
 
-import type { FeatureInterface } from "@/interfaces";
+import type { FeatureType } from "@/interfaces";
 
-const Feature: FC<FeatureInterface> = ({ text, icon }) => {
+const Feature: FC<FeatureType> = ({ text, icon }) => {
 	return (
 		<FeatureContainer>
 			<div className={"feature__icon"}>{React.createElement(icon)}</div>
-			<Typography variant={'h5'}>{text}</Typography>
+			<Typography variant={"h5"}>{text}</Typography>
 		</FeatureContainer>
 	);
 };

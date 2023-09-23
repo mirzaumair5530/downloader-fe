@@ -1,7 +1,6 @@
 import { FC } from "react";
 import Typography, { typographyClasses } from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
-import { containerClasses } from "@mui/material/Container";
 import { MainContainer } from "@/components/sub-components";
 import { Box } from "@mui/material";
 
