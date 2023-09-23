@@ -10,6 +10,7 @@ import { SearchContainer } from "./sub-components";
 import { Box, Grid, Typography } from "@mui/material";
 
 import { Features } from "@/components/Page/Home/Constants";
+import DetailsSectionFour from "../../sub-components/DetailsSectionFour";
 
 const HomeComponent: FC<PropsWithChildren> = () => {
 	return (
@@ -41,6 +42,9 @@ const HomeComponent: FC<PropsWithChildren> = () => {
 
 			{/*	details section 3*/}
 			<DetailsSectionThree />
+
+			{/*	details section 4*/}
+			<DetailsSectionFour />
 		</Box>
 	);
 };
