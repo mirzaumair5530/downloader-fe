@@ -1,16 +1,24 @@
-import { CloudDownload, Restriction, Speedometer } from "@/components/svgs";
+import { Chain, MovieReel, Copy, CloudDownload1 } from "@/components/svgs";
 
 export const Features = [
 	{
-		icon: Speedometer,
-		text: "High-speed downloading",
+		icon: Chain,
+		text: "Step 1",
+		description: "Copy the URL of the video you wish to download",
 	},
 	{
-		icon: Restriction,
-		text: "No registration required",
+		icon: Copy,
+		text: "Step 2",
+		description: "Paste the URL into our user-friendly downloader",
 	},
 	{
-		icon: CloudDownload,
-		text: "Secure downloading",
+		icon: MovieReel,
+		text: "Step 3",
+		description: "Choose your desired video quality to suit your preferences",
+	},
+	{
+		icon: CloudDownload1,
+		text: "Step 4",
+		description: 'Click the "Download" button and let [Website Name] handle the rest',
 	},
 ];

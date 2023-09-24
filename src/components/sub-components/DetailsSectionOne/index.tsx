@@ -1,8 +1,11 @@
 import { FC } from "react";
 import Typography, { typographyClasses } from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
-import { MainContainer } from "@/components/sub-components";
 import { Box } from "@mui/material";
+import Grid, { gridClasses } from "@mui/material/Grid";
+import { MainContainer } from "@/components/sub-components";
+import { cardDetails } from "@/components/sub-components/DetailsSectionOne/constants";
+import { DetailsCards } from "@/components/sub-components/DetailsSectionOne/sub-component";
 
 const DetailsSectionOne: FC = () => {
 	return (
@@ -26,6 +29,15 @@ const DetailsSectionOne: FC = () => {
 						collection of cherished memories, or simply want the freedom to watch without buffering,
 						<span className={"highlighted__text"}> [Website Name]</span> is your ultimate solution.
 					</Typography>
+					<Grid container justifyContent={"flex-start"} paddingY={4}>
+						{cardDetails.map((detail, index) => {
+							return (
+								<Grid item xs={12} sm={6} md={4}>
+									<DetailsCards {...detail} />
+								</Grid>
+							);
+						})}
+					</Grid>
 				</Box>
 			</MainContainer>
 		</StyledContainer>
@@ -42,6 +54,10 @@ const StyledContainer = styled(Box)(({ theme }) => {
 			"& .highlighted__text": {
 				color: theme.palette.primary.main,
 			},
+		},
+
+		[`& .${gridClasses.item}`]: {
+			padding: theme.spacing(2),
 		},
 	};
 });
