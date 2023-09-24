@@ -13,7 +13,7 @@ const MainContainer: FC<MainContainerType> = ({ children, sx }) => {
 
 const StyledContainer = styled(Container, {
 	shouldForwardProp: (propName) => !["sx"].includes(propName as string),
-})(({ theme }) => {
+})(() => {
 	return {
 		display: "flex",
 		flexDirection: "column",

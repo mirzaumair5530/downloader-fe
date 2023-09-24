@@ -1,7 +1,6 @@
 import { FC, PropsWithChildren } from "react";
 import { styled } from "@mui/material/styles";
 import { Box } from "@mui/material";
-import { containerClasses } from "@mui/material/Container";
 import { typographyClasses } from "@mui/material/Typography";
 import { MainContainer } from "@/components/sub-components";
 
