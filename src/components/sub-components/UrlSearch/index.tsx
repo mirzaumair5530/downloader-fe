@@ -21,6 +21,8 @@ const StyledSearch = styled(Box)(() => {
 		flexWrap: "nowrap",
 		minHeight: "58px",
 		marginBlockEnd: "5rem",
+		maxWidth: 800,
+		width: "100%",
 		[`& .${inputBaseClasses.root}`]: {
 			flexGrow: 1,
 			border: "2px solid white",
