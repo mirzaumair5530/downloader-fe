@@ -8,8 +8,13 @@ const DetailsSectionOne: FC = () => {
 	return (
 		<StyledContainer>
 			<MainContainer>
-				<Box className={"section__one__content"}>
-					<Typography fontWeight={"bolder"} variant={"h3"} textAlign={"center"}>
+				<Box paddingY={5} className={"section__one__content"}>
+					<Typography
+						fontSize={{ xs: "2rem", md: "3rem" }}
+						fontWeight={"bolder"}
+						variant={"h3"}
+						textAlign={"center"}
+					>
 						Welcome to <span className={"highlighted__text"}>[Website Name]</span> - Your Premier Online
 						Video Downloader Platform
 					</Typography>
@@ -19,7 +24,7 @@ const DetailsSectionOne: FC = () => {
 						ability to download and enjoy your favorite videos from across the web, whenever and wherever
 						you please. Whether you're seeking to relish entertainment during your commute, create a curated
 						collection of cherished memories, or simply want the freedom to watch without buffering,
-						[Website Name] is your ultimate solution.
+						<span className={"highlighted__text"}> [Website Name]</span> is your ultimate solution.
 					</Typography>
 				</Box>
 			</MainContainer>
@@ -32,7 +37,6 @@ const StyledContainer = styled(Box)(({ theme }) => {
 		"& .section__one__content": {
 			display: "flex",
 			flexDirection: "column",
-			paddingBlock: theme.spacing(5),
 		},
 		[`& .${typographyClasses.root}`]: {
 			"& .highlighted__text": {
