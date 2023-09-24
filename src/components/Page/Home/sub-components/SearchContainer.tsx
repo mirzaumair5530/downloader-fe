@@ -22,14 +22,9 @@ const SearchContainerComponent = styled(Box)(() => {
 		backgroundPosition: "center",
 		backgroundSize: "cover",
 		position: "relative",
-
-		[`& .${containerClasses.root}`]: {
-			transform: "translate(-50%, -50%)",
-			position: "absolute",
-			top: "50%",
-			left: "50%",
-		},
-
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "center",
 		[`& .${typographyClasses.root}`]: {
 			color: "#FFFFFF",
 			textAlign: "center",

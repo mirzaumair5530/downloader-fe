@@ -23,11 +23,19 @@ const HomeComponent: FC<PropsWithChildren> = () => {
 				</Typography>
 				<Typography>Free, Fast and Easy video Downloader - Download Your Favorite Video Now!</Typography>
 				<UrlSearch />
-				<Grid container gap={{ xs: 8, md: 4 }} justifyContent={"space-between"} paddingY={5}>
+				<Grid
+					container
+					gap={{ xs: 1 }}
+					justifyContent={{
+						xs: "center",
+						md: "space-around",
+					}}
+					paddingY={5}
+				>
 					{Features.map((feature, index) => {
 						return (
-							<Grid xs={6} md={"auto"} item key={index} justifyContent={"center"}>
-								<Feature icon={feature.icon} text={feature.text} />
+							<Grid xs={6} sm={4} md={3} lg={2} item key={index} justifyContent={"center"}>
+								<Feature {...feature} />
 							</Grid>
 						);
 					})}
