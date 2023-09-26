@@ -10,7 +10,6 @@ import { SearchContainer } from "./sub-components";
 import { Box, Grid, Typography } from "@mui/material";
 
 import { Features } from "@/components/Page/Home/Constants";
-import DetailsSectionFour from "../../sub-components/DetailsSectionFour";
 
 const HomeComponent: FC<PropsWithChildren> = () => {
 	return (

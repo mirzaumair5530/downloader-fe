@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { styled } from "@mui/material/styles";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import { Feature, MainContainer } from "@/components/sub-components";
 import { features } from "./contants";
 
