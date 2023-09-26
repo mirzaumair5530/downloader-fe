@@ -50,9 +50,6 @@ const HomeComponent: FC<PropsWithChildren> = () => {
 
 			{/*	details section 3*/}
 			<DetailsSectionThree />
-
-			{/*	details section 4*/}
-			<DetailsSectionFour />
 		</Box>
 	);
 };

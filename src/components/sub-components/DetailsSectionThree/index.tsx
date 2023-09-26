@@ -1,59 +1,77 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { styled } from "@mui/material/styles";
 import { Box, Typography } from "@mui/material";
-import Grid, { gridClasses } from "@mui/material/Grid";
+import Accordion, { accordionClasses } from "@mui/material/Accordion";
+import AccordionDetails, { accordionDetailsClasses } from "@mui/material/AccordionDetails";
+import AccordionSummary, { accordionSummaryClasses } from "@mui/material/AccordionSummary";
 import { MainContainer } from "@/components/sub-components";
-import { Restriction } from "@/components/svgs";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { accordionDetails } from "@/components/sub-components/DetailsSectionThree/constants";
 
 const DetailsSectionThree: FC = () => {
+	const [expanded, setExpanded] = useState<any>({
+		0: true,
+		1: false,
+	});
+
+	const handleAccordionChange = (index: number, expanded: boolean) => {
+		setExpanded((prevState: any) => {
+			return {
+				...prevState,
+				[index]: expanded,
+			};
+		});
+	};
 	return (
 		<StyledContainer>
 			<MainContainer>
-				<Grid container gap={5} paddingY={20} justifyContent={"space-between"}>
-					<Grid item xs={12} md={4}>
-						<Restriction />
-					</Grid>
-					<Grid
-						item
-						xs={12}
-						md={7}
-						container
-						alignItems={"center"}
-						flexDirection={"column"}
-						justifyContent={"space-around"}
-					>
-						<Typography
-							color={"primary.main"}
-							variant={"h1"}
-							fontSize={"3.75rem"}
-							fontWeight={"bolder"}
-							textAlign={"center"}
+				{accordionDetails.map((detail, index) => {
+					return (
+						<StyledAccordion
+							onChange={(_, expanded) => handleAccordionChange(index, expanded)}
+							expanded={expanded[index]}
+							key={index}
 						>
-							No-Registration <br /> Required
-						</Typography>
-						<Typography color={"primary.main"} textAlign={"center"} maxWidth={"55ch"}>
-							Say goodbye to the hassle of registering for an account just to download images. Our website
-							is designed to provide an effortless and convenient experience to our users. With our
-							&#39;No Registration Required&#39; feature, you can directly download images without any
-							added steps. Simply search, preview and download - it's that easy!
-						</Typography>
-					</Grid>
-				</Grid>
+							<AccordionSummary expandIcon={<ExpandMoreIcon />}>
+								<Typography variant={"h5"} fontWeight={"bolder"}>
+									{detail.title}
+								</Typography>
+							</AccordionSummary>
+							<AccordionDetails>
+								<Typography fontSize={"1.5rem"}>{detail.description}</Typography>
+							</AccordionDetails>
+						</StyledAccordion>
+					);
+				})}
 			</MainContainer>
 		</StyledContainer>
 	);
 };
 
-const StyledContainer = styled(Box)(() => {
+const StyledContainer = styled(Box)(({ theme }) => {
 	return {
-		[`& .${gridClasses.item}`]: {
+		padding: theme.spacing(5),
+	};
+});
+
+const StyledAccordion = styled(Accordion)(({ theme }) => {
+	return {
+		[`&.${accordionClasses.root}`]: {
+			padding: theme.spacing(2),
+			borderRadius: 20,
+			backgroundColor: theme.palette.primary.main,
+			marginBottom: theme.spacing(2),
+		},
+
+		[`& .${accordionSummaryClasses.expandIconWrapper}`]: {
 			"& svg": {
-				width: "100%",
-				height: "100%",
-				maxWidth: 375,
-				maxHeight: 375,
+				fontSize: "2.5rem",
 			},
 		},
+		[`& .${accordionSummaryClasses.root}, & .${accordionDetailsClasses.root}, & .${accordionSummaryClasses.expandIconWrapper}`]:
+			{
+				color: "#FFFFFF",
+			},
 	};
 });
 export default DetailsSectionThree;

@@ -1,31 +1,33 @@
 import { FC } from "react";
 import { styled } from "@mui/material/styles";
-import { Box, Typography } from "@mui/material";
-import { MainContainer } from "@/components/sub-components";
-import { Speedometer } from "@/components/svgs";
+import { Box, Grid, Typography } from "@mui/material";
+import { Feature, MainContainer } from "@/components/sub-components";
+import { features } from "./contants";
 
 const DetailsSectionTwo: FC = () => {
 	return (
 		<DetailsSectionTwoContainer>
 			<MainContainer>
-				<Box className={"details__section__two__content"}>
-					<Speedometer />
-					<Typography
-						fontSize={"3.75rem"}
-						color={"primary.main"}
-						variant={"h1"}
-						fontWeight={"bolder"}
-						textAlign={"center"}
-					>
-						High-speed <br /> Downloading
-					</Typography>
-					<Typography className={"details"} textAlign={"center"} mt={2}>
-						Experience lightning fast downloading with our High-Speed Download feature. Say goodbye to long
-						wait times and slow downloads. With our state-of-the-art technology, you can download your
-						favorite images in no time, allowing you to save time and get more done. Say hello to a seamless
-						and efficient downloading experience, every time.
-					</Typography>
-				</Box>
+				<Grid container paddingTop={15} paddingBottom={25}>
+					{features.map((feature, index) => {
+						return (
+							<Grid xs={12} md={4} item key={index}>
+								<Feature
+									{...feature}
+									iconStyle={{
+										width: 125,
+										height: 125,
+									}}
+									descriptionStyle={{
+										color: "#FFFFFF",
+										fontSize: "1rem",
+										maxWidth: "38ch",
+									}}
+								/>
+							</Grid>
+						);
+					})}
+				</Grid>
 			</MainContainer>
 		</DetailsSectionTwoContainer>
 	);
