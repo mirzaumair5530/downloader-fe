@@ -1,7 +1,10 @@
-import { FunctionComponent } from "react";
+import React, { FunctionComponent } from "react";
 
 export default interface Feature {
 	icon: FunctionComponent;
-	text: string;
+	title?: string;
 	description: string;
+	descriptionStyle?: React.CSSProperties;
+	iconStyle?: React.CSSProperties;
+	titleStyle?: React.CSSProperties;
 }
